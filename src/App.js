@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Main from "./components/Main";
 import Detail from "./components/Detail";
 import Login from "./components/Login";
+import Signup from "./components/Signup";
 import RestaurantList from "./components/RestaurantList";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -23,6 +24,7 @@ function App() {
 				<Route path="restaurants/:category" element={<RestaurantList />} />
 				<Route path="restaurants/detail" element={<Detail />} />
 				<Route path="/login" element={<Login />} />
+				<Route path="/signup" element={<Signup />} />
 				{/* </Route> */}
 				<Route path="*" element={<div>There's nothing here!</div>} />
 			</Routes>
