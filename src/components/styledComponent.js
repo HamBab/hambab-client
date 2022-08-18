@@ -201,3 +201,29 @@ export const SignupButton = styled.div`
 	cursor: pointer;
 	color: #495057;
 `;
+
+// signup
+export const SignupSection = styled.div`
+	border: 2px solid #dee2e6;
+	width: 30rem;
+	padding-top: 3rem;
+	padding-bottom: 4rem;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 8rem;
+	margin-bottom: 8rem;
+
+	input {
+		width: 20rem;
+		height: 3rem;
+		border-width: 0px 0px 4px 0px;
+		border-color: #ced4da;
+		background-color: transparent;
+		margin-top: 30px;
+		padding-left: 0.3rem;
+	}
+
+	h1 {
+		color: #495057;
+	}
+`;
