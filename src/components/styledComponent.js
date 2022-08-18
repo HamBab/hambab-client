@@ -155,3 +155,49 @@ export const PagingSection = styled.div`
 		border: none;
 	}
 `;
+
+// login
+export const LoginSection = styled.div`
+	// background-color: red;
+	border: 2px solid #dee2e6;
+	width: 30rem;
+	padding-top: 3rem;
+	padding-bottom: 4rem;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 8rem;
+
+	input {
+		width: 20rem;
+		height: 3rem;
+		border-width: 0px 0px 4px 0px;
+		border-color: #ced4da;
+		background-color: transparent;
+		margin-top: 30px;
+		padding-left: 0.3rem;
+	}
+
+	h1 {
+		color: #495057;
+	}
+`;
+
+export const LoginText = styled.h1`
+	font-size: 12pt;
+	width: 20rem;
+	margin: 0 auto;
+	display: flex;
+	margin-top: 10px;
+`;
+
+export const ButtonDiv = styled.div`
+	width: 20rem;
+	margin: 0 auto;
+	margin-top: 50px;
+`;
+
+export const SignupButton = styled.div`
+	padding-left: 8px;
+	cursor: pointer;
+	color: #495057;
+`;
