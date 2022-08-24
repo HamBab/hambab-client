@@ -17,6 +17,8 @@ import cafe from "../images/카페2.png";
 import fast from "../images/패스트푸드.png";
 import etc from "../images/기타.png";
 import { useNavigate } from "react-router-dom";
+import logo from "../images/logo.png";
+
 
 const Main = ({ onSelect }) => {
 	const navigate = useNavigate();
@@ -26,7 +28,11 @@ const Main = ({ onSelect }) => {
 
 	return (
 		<MainSection>
-			<SearchForm></SearchForm>
+			<SearchForm>
+				<img src={logo} alt="LOGO" width={350}></img>
+				<input type="text" placeholder="식당 이름 또는 메뉴 검색..."></input>
+				<input type="button" id="search" value="검색"></input>
+			</SearchForm>
 			<MenuDiv>
 				<Up>
 					<CategoryItem
@@ -35,7 +41,7 @@ const Main = ({ onSelect }) => {
 							onSelect("M");
 						}}
 					>
-						<img src={kor} alt="logo" width={60}></img>
+						<img src={kor} alt="한식" width={60}></img>
 						<div>한식</div>
 					</CategoryItem>
 					<CategoryItem
@@ -44,7 +50,7 @@ const Main = ({ onSelect }) => {
 							onSelect("M");
 						}}
 					>
-						<img src={west} alt="logo" width={60}></img>
+						<img src={west} alt="양식" width={60}></img>
 						<div>양식</div>
 					</CategoryItem>
 					<CategoryItem
@@ -53,7 +59,7 @@ const Main = ({ onSelect }) => {
 							onSelect("M");
 						}}
 					>
-						<img src={japan} alt="logo" width={60}></img>
+						<img src={japan} alt="일식" width={60}></img>
 						<div>일식</div>
 					</CategoryItem>
 					<CategoryItem
@@ -62,7 +68,7 @@ const Main = ({ onSelect }) => {
 							onSelect("M");
 						}}
 					>
-						<img src={china} alt="logo" width={60}></img>
+						<img src={china} alt="중식" width={60}></img>
 						<div>중식</div>
 					</CategoryItem>
 				</Up>
@@ -73,7 +79,7 @@ const Main = ({ onSelect }) => {
 							onSelect("M");
 						}}
 					>
-						<img src={asia} alt="logo" width={60}></img>
+						<img src={asia} alt="아시아" width={60}></img>
 						<div>아시아</div>
 					</CategoryItem>
 					<CategoryItem
@@ -82,7 +88,7 @@ const Main = ({ onSelect }) => {
 							onSelect("M");
 						}}
 					>
-						<img src={fast} alt="logo" width={60}></img>
+						<img src={fast} alt="패스트푸드" width={60}></img>
 						<div>패스트푸드</div>
 					</CategoryItem>
 					<CategoryItem
@@ -91,7 +97,7 @@ const Main = ({ onSelect }) => {
 							onSelect("M");
 						}}
 					>
-						<img src={cafe} alt="logo" width={60}></img>
+						<img src={cafe} alt="카페" width={60}></img>
 						<div>카페</div>
 					</CategoryItem>
 					<CategoryItem
@@ -100,7 +106,7 @@ const Main = ({ onSelect }) => {
 							onSelect("HOME");
 						}}
 					>
-						<img src={etc} alt="logo" width={60}></img>
+						<img src={etc} alt="기타" width={60}></img>
 						<div>기타</div>
 					</CategoryItem>
 				</Down>
