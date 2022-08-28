@@ -8,6 +8,37 @@ const Signup = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [confirmPassword, setConfirmPassword] = useState("");
+	const [nickname, setNickname] = useState("");
+	const [sex, setSex] = useState("");
+	const [year, setYear] = useState("");
+	const [month, setMonth] = useState("");
+	const [day, setDay] = useState("");
+
+	const yearList = [];
+	const monthList = [];
+	const day28List = [];
+	const day29List = [];
+	const day30List = [];
+	const day31List = [];
+
+	for (let i = 1900; i <= 2004; i++) {
+		yearList.push(i);
+	}
+	for (let i = 1; i <= 12; i++) {
+		monthList.push(i);
+	}
+	for (let i = 1; i <= 28; i++) {
+		day28List.push(i);
+	}
+	for (let i = 1; i <= 29; i++) {
+		day29List.push(i);
+	}
+	for (let i = 1; i <= 30; i++) {
+		day30List.push(i);
+	}
+	for (let i = 1; i <= 31; i++) {
+		day31List.push(i);
+	}
 
 	const handleSignUpButton = async () => {
 		// try {
@@ -42,6 +73,22 @@ const Signup = () => {
 
 	const onConfirmPasswordHandler = (event) => {
 		setConfirmPassword(event.currentTarget.value);
+	};
+
+	const onNicknameHandler = (event) => {
+		setNickname(event.currentTarget.value);
+	};
+	const onSexHandler = (event) => {
+		setSex(event.currentTarget.value);
+	};
+	const onYearHandler = (event) => {
+		setYear(event.currentTarget.value);
+	};
+	const onMonthHandler = (event) => {
+		setMonth(event.currentTarget.value);
+	};
+	const onDayHandler = (event) => {
+		setDay(event.currentTarget.value);
 	};
 
 	return (
@@ -87,6 +134,44 @@ const Signup = () => {
 						onChange={onConfirmPasswordHandler}
 						className="loginregister__input"
 					/>
+				</div>
+				<div>
+					<input
+						type="text"
+						placeholder="닉네임"
+						onChange={onNicknameHandler}
+					/>
+				</div>
+				<div class="info" id="info__birth">
+					<select class="box" id="birth-year">
+						<option disabled selected>
+							출생 연도
+						</option>
+						{yearList.map((year) => (
+							<option value={year} key={year}>
+								{year}
+							</option>
+						))}
+					</select>
+					<select class="box" id="birth-month">
+						<option disabled selected>
+							월
+						</option>
+						{monthList.map((mon) => (
+							<option value={mon} key={mon}>
+								{mon}
+							</option>
+						))}
+					</select>
+					<select class="box" id="birth-day">
+						<option disabled selected>
+							일
+						</option>
+					</select>
+				</div>
+				<div>
+					<input type="radio" name="sex" value="male" />남
+					<input type="radio" name="sex" value="female" />여
 				</div>
 				<ButtonDiv className="d-grid gap-2">
 					{confirmPassword.length === 0 ||
