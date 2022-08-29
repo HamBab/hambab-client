@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+
+
 // import axios from "axios";
 import { SignupSection, ButtonDiv } from "./styledComponent";
 import Button from "react-bootstrap/Button";
@@ -110,7 +112,7 @@ const Signup = () => {
 
 	return (
 		<SignupSection>
-			<h1>SignUp</h1>
+			<h2>SignUp</h2>
 			<form>
 				<div>
 					<input
@@ -205,10 +207,10 @@ const Signup = () => {
 				</div>
 				<ButtonDiv className="d-grid gap-2">
 					{confirmPassword.length === 0 ||
-					name.length === 0 ||
-					password.length === 0 ||
-					email.length === 0 ? (
-						<Button variant="outline-light" size="lg" disabled>
+						name.length === 0 ||
+						password.length === 0 ||
+						email.length === 0 ? (
+						<Button variant="outline-light" size="lg">
 							회원가입
 						</Button>
 					) : (
