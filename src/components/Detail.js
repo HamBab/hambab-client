@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./Navbar.js";
 import Frame26 from "./Content.js";
 
-export const Details = ({ ...props }) => {
+const Details = ({ ...props }) => {
+
+	const [mode, setMode] = useState("DETAIL");
+
 	return (
-		<div style={{ backgroundColor: "rgba(229, 229, 229, 1)" }}>
-			<Frame26></Frame26>
-		</div>
+		<Frame26></Frame26>
 	);
 };
 export default Details;

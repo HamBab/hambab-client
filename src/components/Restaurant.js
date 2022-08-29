@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+
 import {
 	ResItem,
 	IndexDiv,
@@ -9,6 +10,9 @@ import {
 } from "./styledComponent";
 
 const Restaurant = ({ id, name, address, category, number }) => {
+
+	const [mode, setMode] = useState('RESTAURANTS');
+
 	return (
 		<ResItem>
 			<IndexDiv>{id}</IndexDiv>

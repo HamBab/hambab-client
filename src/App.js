@@ -16,16 +16,16 @@ function App() {
 	return (
 		<div className="App">
 			<Routes>
-				{/* <Route
+				<Route
 					path="/"
 					element={<Navbar onSelect={onSelect} location={location} />}
-				> */}
-				<Route index element={<Main onSelect={onSelect} />} />
-				<Route path="restaurants/:category" element={<RestaurantList />} />
-				<Route path="restaurants/detail" element={<Detail />} />
-				<Route path="/login" element={<Login />} />
-				<Route path="/signup" element={<Signup />} />
-				{/* </Route> */}
+				>
+					<Route index element={<Main onSelect={onSelect} />} />
+					<Route path="restaurants/:category" element={<RestaurantList />} />
+					<Route path="restaurants/detail" element={<Detail />} />
+					<Route path="/login" element={<Login />} />
+					<Route path="/signup" element={<Signup />} />
+				</Route>
 				<Route path="*" element={<div>There's nothing here!</div>} />
 			</Routes>
 		</div>

@@ -10,6 +10,7 @@ import {
 import Button from "react-bootstrap/Button";
 
 const Login = () => {
+	const [mode, setMode] = useState('LOGIN');
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
 
@@ -45,7 +46,7 @@ const Login = () => {
 
 	return (
 		<LoginSection>
-			<h1>LOGIN</h1>
+			<h2>LOGIN</h2>
 			<input
 				type="text"
 				size={20}
@@ -67,7 +68,7 @@ const Login = () => {
 			/>
 			<ButtonDiv className="d-grid gap-2">
 				{password.length === 0 ? (
-					<Button variant="outline-light" size="lg" disabled>
+					<Button variant="outline-light" size="lg">
 						로그인
 					</Button>
 				) : (

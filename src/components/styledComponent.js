@@ -10,15 +10,31 @@ export const SearchForm = styled.div`
 	input {
 		border: none;
 		color: #818087;
+		margin-top:30px;
+		padding: 10px 5px 10px 5px;
 	}
+	#search {
+		color: white;
+		background-color: #19abbf;
+		margin-top: 10px;
+		padding: 5px 0 5px 0;
+		
+	}
+	justify-content: center;
+	align-item: center;
+	display: grid;
+	flex-direction: row;
+	margin: 0px auto;
+	padding-top: 10rem;
 `;
 
 export const MainSection = styled.div`
 	background-color: rgba(229, 229, 229, 1);
 	padding-bottom: 10rem;
+	justify-contents: center;
 `;
 export const MenuDiv = styled.div`
-	margin-top: 20rem;
+	margin-top: 17rem;
 `;
 
 export const CategoryItem = styled.div`
@@ -158,27 +174,38 @@ export const PagingSection = styled.div`
 
 // login
 export const LoginSection = styled.div`
-	// background-color: red;
-	border: 2px solid #dee2e6;
-	width: 30rem;
+	background-color: #ffffff;
+	border-radius: 10px;
+	width: 35rem;
 	padding-top: 3rem;
 	padding-bottom: 4rem;
 	margin: 0 auto;
 	text-align: center;
 	margin-top: 8rem;
+	box-shadow: 0 5px 18px -7px rgba(0,0,0,0.2);
 
 	input {
-		width: 20rem;
-		height: 3rem;
-		border-width: 0px 0px 4px 0px;
-		border-color: #ced4da;
+		width: 18rem;
+		height: 2.5rem;
+		border: 2px solid #19abbf;
+		border-radius: 20px;
 		background-color: transparent;
-		margin-top: 30px;
-		padding-left: 0.3rem;
+		margin-top: 20px;
+		padding-left: 1rem;
+		content: "f0e0";
+		font-family: "Font Awesome 5 Free"; 
 	}
-
-	h1 {
+	h2 {
 		color: #495057;
+		padding-bottom: 2rem;
+	}
+	button {
+		border-radius: 100px;
+		&:hover {
+			box-shadow: 0 0 0 2px #19abbf inset; 
+			color: #19abbf;
+			border-radius: 100px;
+		}
 	}
 `;
 
@@ -193,7 +220,11 @@ export const LoginText = styled.h1`
 export const ButtonDiv = styled.div`
 	width: 20rem;
 	margin: 0 auto;
-	margin-top: 50px;
+	margin-top: 40px;
+	background-color: #19abbf;
+	color: #ffffff;
+	border; none;
+	border-radius: 100px;
 `;
 
 export const SignupButton = styled.div`
@@ -204,26 +235,38 @@ export const SignupButton = styled.div`
 
 // signup
 export const SignupSection = styled.div`
-	border: 2px solid #dee2e6;
-	width: 30rem;
+
+	background-color: #ffffff;
+	border-radius: 10px;
+	width: 35rem;
 	padding-top: 3rem;
 	padding-bottom: 4rem;
 	margin: 0 auto;
 	text-align: center;
 	margin-top: 8rem;
+	box-shadow: 0 5px 18px -7px rgba(0,0,0,0.2)
+
 	margin-bottom: 8rem;
 
 	input {
-		width: 20rem;
-		height: 3rem;
-		border-width: 0px 0px 4px 0px;
-		border-color: #ced4da;
+		width: 18rem;
+		height: 2.5rem;
+		border: 2px solid #19abbf;
+		border-radius: 20px;
 		background-color: transparent;
-		margin-top: 30px;
-		padding-left: 0.3rem;
+		margin-top: 20px;
+		padding-left: 1rem;
 	}
-
-	h1 {
+	h2 {
 		color: #495057;
+		padding-bottom: 2rem;
+	}
+	button {
+		border-radius: 100px;
+		&:hover {
+			box-shadow: 0 0 0 2px #19abbf inset; 
+			color: #19abbf;
+			border-radius: 100px;
+		}
 	}
 `;

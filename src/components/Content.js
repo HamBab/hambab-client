@@ -1,4 +1,3 @@
-/* Code generated with AutoHTML for Figma */
 import './Content.css';
 import React, { Component } from 'react';
 
@@ -151,6 +150,7 @@ export const Frame26 = (props) => {
     const RestCategory = "한식";
     const RestAddress = "서울특별시 동대문구";
     const RestNumber = "02-123-4567";
+
 
     return (
         <div className='content'>
