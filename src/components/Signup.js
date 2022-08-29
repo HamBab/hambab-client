@@ -71,6 +71,13 @@ const Signup = () => {
 				</div>
 				<div>
 					<input
+						type="text"
+						placeholder="닉네임"
+						onChange={onNicknameHandler}
+					/>
+				</div>
+				<div>
+					<input
 						name="password"
 						type="password"
 						placeholder="비밀번호"
@@ -89,6 +96,60 @@ const Signup = () => {
 						className="loginregister__input"
 					/>
 				</div>
+<<<<<<< Updated upstream
+=======
+				<div id="info__birth">
+					<select id="birth-year" onChange={onYearHandler}>
+						<option disabled selected>
+							출생 연도
+						</option>
+						{yearList.map((year) => (
+							<option value={year} key={year}>
+								{year}
+							</option>
+						))}
+					</select>
+					<select id="birth-month" onChange={onMonthHandler}>
+						<option disabled selected>
+							월
+						</option>
+						{monthList.map((mon) => (
+							<option value={mon} key={mon}>
+								{mon}
+							</option>
+						))}
+					</select>
+					<select id="birth-day" onChange={onDayHandler}>
+						<option disabled selected>
+							일
+						</option>
+						{dayList.length != 0 &&
+							dayList.map((day) => (
+								<option value={day} key={day}>
+									{day}
+								</option>
+							))}
+					</select>
+				</div>
+				<div id="radio__sex">
+					<section id="id_male">
+						<input
+							type="radio"
+							name="sex"
+							value="male"
+							onChange={onSexHandler} />
+						남
+					</section>
+					<section id="id_female">
+						<input
+							type="radio"
+							name="sex"
+							value="female"
+							onChange={onSexHandler} />
+						여
+					</section>
+				</div>
+>>>>>>> Stashed changes
 				<ButtonDiv className="d-grid gap-2">
 					{confirmPassword.length === 0 ||
 						name.length === 0 ||
