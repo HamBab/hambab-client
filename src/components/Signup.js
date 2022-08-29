@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 // import axios from "axios";
 import { SignupSection, ButtonDiv } from "./styledComponent";
 import Button from "react-bootstrap/Button";
@@ -13,32 +13,49 @@ const Signup = () => {
 	const [year, setYear] = useState("");
 	const [month, setMonth] = useState("");
 	const [day, setDay] = useState("");
+	const [dayList, setDayList] = useState("");
 
 	const yearList = [];
-	const monthList = [];
-	const day28List = [];
-	const day29List = [];
-	const day30List = [];
-	const day31List = [];
+	const monthList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
-	for (let i = 1900; i <= 2004; i++) {
+	for (let i = 1900; i < 2005; i++) {
 		yearList.push(i);
 	}
-	for (let i = 1; i <= 12; i++) {
-		monthList.push(i);
-	}
-	for (let i = 1; i <= 28; i++) {
-		day28List.push(i);
-	}
-	for (let i = 1; i <= 29; i++) {
-		day29List.push(i);
-	}
-	for (let i = 1; i <= 30; i++) {
-		day30List.push(i);
-	}
-	for (let i = 1; i <= 31; i++) {
-		day31List.push(i);
-	}
+
+	useEffect(() => {
+		const temp = [];
+		if (
+			month == 1 ||
+			month == 3 ||
+			month == 5 ||
+			month == 7 ||
+			month == 8 ||
+			month == 10 ||
+			month == 12
+		) {
+			for (let i = 1; i <= 31; i++) {
+				temp.push(i);
+			}
+		} else if (month == 2) {
+			if (
+				(year % 4 == 0 && year % 100 != 0) ||
+				(year % 100 != 0 && year % 400 == 0)
+			) {
+				for (let i = 1; i <= 29; i++) {
+					temp.push(i);
+				}
+			} else {
+				for (let i = 1; i <= 28; i++) {
+					temp.push(i);
+				}
+			}
+		} else if (month == 4 || month == 6 || month == 9 || month == 11) {
+			for (let i = 1; i <= 30; i++) {
+				temp.push(i);
+			}
+		}
+		setDayList(temp);
+	}, [month, year]);
 
 	const handleSignUpButton = async () => {
 		// try {
@@ -142,8 +159,8 @@ const Signup = () => {
 						onChange={onNicknameHandler}
 					/>
 				</div>
-				<div class="info" id="info__birth">
-					<select class="box" id="birth-year">
+				<div id="info__birth">
+					<select id="birth-year" onChange={onYearHandler}>
 						<option disabled selected>
 							출생 연도
 						</option>
@@ -153,7 +170,7 @@ const Signup = () => {
 							</option>
 						))}
 					</select>
-					<select class="box" id="birth-month">
+					<select id="birth-month" onChange={onMonthHandler}>
 						<option disabled selected>
 							월
 						</option>
@@ -163,15 +180,28 @@ const Signup = () => {
 							</option>
 						))}
 					</select>
-					<select class="box" id="birth-day">
+					<select id="birth-day" onChange={onDayHandler}>
 						<option disabled selected>
 							일
 						</option>
+						{dayList.length != 0 &&
+							dayList.map((day) => (
+								<option value={day} key={day}>
+									{day}
+								</option>
+							))}
 					</select>
 				</div>
 				<div>
-					<input type="radio" name="sex" value="male" />남
-					<input type="radio" name="sex" value="female" />여
+					<input type="radio" name="sex" value="male" onChange={onSexHandler} />
+					남
+					<input
+						type="radio"
+						name="sex"
+						value="female"
+						onChange={onSexHandler}
+					/>
+					여
 				</div>
 				<ButtonDiv className="d-grid gap-2">
 					{confirmPassword.length === 0 ||
