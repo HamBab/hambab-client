@@ -136,6 +136,13 @@ const Signup = () => {
 				</div>
 				<div>
 					<input
+						type="text"
+						placeholder="닉네임"
+						onChange={onNicknameHandler}
+					/>
+				</div>
+				<div>
+					<input
 						name="password"
 						type="password"
 						placeholder="비밀번호"
@@ -152,13 +159,6 @@ const Signup = () => {
 						value={confirmPassword}
 						onChange={onConfirmPasswordHandler}
 						className="loginregister__input"
-					/>
-				</div>
-				<div>
-					<input
-						type="text"
-						placeholder="닉네임"
-						onChange={onNicknameHandler}
 					/>
 				</div>
 				<div id="info__birth">
@@ -194,16 +194,23 @@ const Signup = () => {
 							))}
 					</select>
 				</div>
-				<div>
-					<input type="radio" name="sex" value="male" onChange={onSexHandler} />
-					남
-					<input
-						type="radio"
-						name="sex"
-						value="female"
-						onChange={onSexHandler}
-					/>
-					여
+				<div id="radio__sex">
+					<section id="id_male">
+						<input
+							type="radio"
+							name="sex"
+							value="male"
+							onChange={onSexHandler} />
+						남
+					</section>
+					<section id="id_female">
+						<input
+							type="radio"
+							name="sex"
+							value="female"
+							onChange={onSexHandler} />
+						여
+					</section>
 				</div>
 				<ButtonDiv className="d-grid gap-2">
 					{confirmPassword.length === 0 ||

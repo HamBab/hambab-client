@@ -269,4 +269,49 @@ export const SignupSection = styled.div`
 			border-radius: 100px;
 		}
 	}
+	#info__birth {
+		width: 18rem;
+		height: 2.5rem;
+		display:grid;
+		grid-auto-flow: column;
+		margin-left: auto;
+		margin-right: auto;
+		gap: 20px;
+	}
+	#birth-year, #birth-month, #birth-day {
+		border: 2px solid #19abbf;
+		border-radius: 20px;
+		margin-top: 20px;
+		height: 2.5rem;
+		padding-left: 1rem;
+		// padding-right: 5px;
+		// text-align: center;
+		color: #6c757d;
+	}
+	#radio__sex {
+		width: 18rem;
+		height: 2.5rem;
+		display:grid;
+		grid-auto-flow: column;
+		margin-top: 20px;
+		margin-bottom: 4.5rem;
+		margin-left: auto;
+		margin-right: auto;
+		// border: 2px solid #19abbf;
+		// border-radius: 20px
+	}
+	#id_male, #id_female {
+		display: grid;
+		grid-auto-flow: row;
+		text-align: center;
+		color: #6c757d;
+		input[type="radio"] {
+			width: 1.5rem;
+			justify-self: center;
+		}
+		input[type="radio"]:checked {
+			accent-color: #19abbf;
+		}
+	}
+
 `;
