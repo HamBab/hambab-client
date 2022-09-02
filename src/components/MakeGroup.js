@@ -1,30 +1,70 @@
-import './Content.css';
-import { React } from 'react';
+import { React, useState } from "react";
+import { 
+    Content,
+    Main,
+    MainContents,
+    Item, 
+    LItem,
+    RItem,
+    FullItem,
+    Tag,
+    Tags
+} from "./styledComponent";
 
+// 그룹 개설 페이지
 const Details = (props) => {
     return (
-        <div className="frame-23">
-            <div className="frame-22">
-                <div className="---">
-                    {props.name}
-                </div>
-            </div>
-            <div className="frame-232">
-                <div className="-------">
-                    🗂 {props.category}
-                </div>
-            </div>
-            <div className="frame-24">
-                <div className="-----">
-                    📍 {props.address}
-                </div>
-            </div>
-            <div className="frame-25">
-                <div className="-------">
-                    📞 {props.number}
-                </div>
-            </div>
-        </div>
+        <MainContents>
+            <header>
+                <h2>{props.name}</h2>
+            </header>
+            <LItem>
+                <Item>
+                    🗂 그룹명
+                    <p><input type="text"></input>
+                    </p>
+                </Item>
+            </LItem>
+            <RItem>
+                <Item>
+                    📍 날짜 선택
+                    <p><input type="date"></input></p>
+                </Item>
+            </RItem>
+            <LItem>
+                <Item>
+                    👥 희망 인원
+                    <p><input type="number" min={1}></input></p>
+                </Item>
+            </LItem>
+            <RItem>
+                <Item>
+                    ⏰ 시간 선택
+                    <p><input type="time" style={{width:'90px'}}></input> ~ <input type="time"style={{width:'90px'}}></input></p>
+                </Item>
+            </RItem>
+            <FullItem>
+                <Item>
+                    🏷 조건 설정
+                    <p><Tags>
+                            <Tag>#10대</Tag>
+                            <Tag>#20대</Tag>
+                            <Tag>#30대</Tag>
+                            <Tag>#40대</Tag>
+                            <Tag>#50대</Tag>
+                            <Tag>#60대 이상</Tag>
+                            <Tag>#연령무관</Tag>
+                        </Tags>
+                    </p>
+                </Item>
+            </FullItem>
+            <FullItem>
+                <Item>
+                    ✒️ 상세 설명<br></br>
+                    <textarea></textarea>
+                </Item>
+            </FullItem>
+            </MainContents>
     )
 }
 
@@ -33,7 +73,7 @@ const Groups = (props) => {
         <div className="frame-27">
             <div className="button">
                 <div className="-----2">
-                    그룹 개설
+                    그룹 개설하기
                 </div>
             </div>
             <div className="groups">
@@ -41,7 +81,7 @@ const Groups = (props) => {
                     <div className="frame-33">
                         <div className="frame-332">
                             <div className="---2">
-                                그룹명
+                                그룹 구성 안내
                             </div>
                         </div>
                         <div className="frame-34">
@@ -145,20 +185,18 @@ const Groups = (props) => {
         </div>
     )
 }
-export const Frame26 = (props) => {
+const MakeGroup = () => {
     const RestName = "도란도란";
     const RestCategory = "한식";
     const RestAddress = "서울특별시 동대문구";
     const RestNumber = "02-123-4567";
-
-
     return (
-        <div className='content'>
-            <div className="frame-26">
+        <Content>
+            <Main>
                 <Details name={RestName} category={RestCategory} address={RestAddress} number={RestNumber}></Details>
                 <Groups groupname="그룹명그룹명"></Groups>
-            </div>
-        </div>
+            </Main>
+        </Content>
     )
 }
-export default Frame26;
+export default MakeGroup;
