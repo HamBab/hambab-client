@@ -1,7 +1,6 @@
 import styled, { css } from "styled-components";
 
 // Main
-
 export const SearchForm = styled.div`
 	flex-shrink: 0;
 	width: 400px;
@@ -235,7 +234,7 @@ export const SignupButton = styled.div`
 
 // signup
 export const SignupSection = styled.div`
-
+{
 	background-color: #ffffff;
 	border-radius: 10px;
 	width: 35rem;
@@ -313,5 +312,92 @@ export const SignupSection = styled.div`
 			accent-color: #19abbf;
 		}
 	}
+`;
 
+export const Content = styled.div`
+	background-color: rgba(229, 229, 229, 1);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    text-align: center;
+`;
+export const Main = styled.div`
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	padding: 0px;
+	gap: 80px;
+
+	position: absolute;
+	width: 1180px;
+	height: 550px;
+	top: 10px;
+
+	position: relative;
+`;
+export const MainContents = styled.div`
+	header {
+		color: #000000;
+		display: block;
+		grid-column: span 2;
+		
+	}
+	background: #ffffff;
+    border-radius: 10px;
+    padding: 50px;
+    display: grid;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 650px;
+    height: 550px;
+    position: relative;
+	grid-template-columns: 1fr 1fr;
+`;
+export const Item = styled.div`
+	color: #000000;
+    text-align: center;
+    font: 500 16px 'Inter';
+	line-height: 1.6rem;
+    // position: relative;
+	// display: flex;
+	align-items: flex-start;
+    justify-content: flex-start;
+	textarea {
+		overflow-y: scroll;
+		width: 450px;
+		height: 100px;
+		resize: none;
+	}
+	input {
+		width: 200px;
+		height: 25px;
+	}
+`;
+export const LItem = styled.div`
+	text-align:center;
+	justify-self: center;	
+`;
+export const RItem = styled.div`
+	text-align:center;
+	justify-self: center;
+`;
+export const FullItem = styled.div`
+	grid-column: span 2;
+	justify-self: center;
+`;
+export const Tag = styled.div`
+border: 1px solid black;
+`;
+export const Tags = styled.div`
+	display:grid;
+	flex-direction: column;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	
 `;
