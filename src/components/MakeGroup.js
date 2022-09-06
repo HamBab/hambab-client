@@ -8,7 +8,16 @@ import {
     RItem,
     FullItem,
     Tag,
-    Tags
+    Tags,
+    MkGroupButton,
+    Info,
+    InfoHeader,
+    InfoBody,
+    Tab1,
+    Tab2,
+    Tab3,
+    GroupOption,
+
 } from "./styledComponent";
 
 // 그룹 개설 페이지
@@ -70,119 +79,27 @@ const Details = (props) => {
 
 const Groups = (props) => {
     return (
-        <div className="frame-27">
-            <div className="button">
-                <div className="-----2">
-                    그룹 개설하기
-                </div>
-            </div>
-            <div className="groups">
-                <div className="header">
-                    <div className="frame-33">
-                        <div className="frame-332">
-                            <div className="---2">
-                                그룹 구성 안내
-                            </div>
-                        </div>
-                        <div className="frame-34">
-                            <div className="----">
-                                모집인원
-                            </div>
-                        </div>
-                        <div className="frame-35">
-                            <div className="----2">
-                                진행상태
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="frame-37">
-                    <div className="frame-332">
-                        <div className="---------">
-                            {props.groupname}
-                        </div>
-                    </div>
-                    <div className="frame-34">
-                        <div className="_1-3">
-                            1/3
-                        </div>
-                    </div>
-                    <div className="frame-35">
-                        <div className="---3">
-                            모집중
-                        </div>
-                    </div>
-                </div>
-                <div className="frame-342">
-                    <div className="frame-332">
-                        <div className="---4">
-                            모임명
-                        </div>
-                    </div>
-                    <div className="frame-34">
-                        <div className="_1-3">
-                            1/3
-                        </div>
-                    </div>
-                    <div className="frame-35">
-                        <div className="---3">
-                            모집중
-                        </div>
-                    </div>
-                </div>
-                <div className="frame-352">
-                    <div className="frame-332">
-                        <div className="---------">
-                            같이 저녁 먹어요
-                        </div>
-                    </div>
-                    <div className="frame-34">
-                        <div className="_1-3">
-                            1/3
-                        </div>
-                    </div>
-                    <div className="frame-35">
-                        <div className="----3">
-                            모집완료
-                        </div>
-                    </div>
-                </div>
-                <div className="frame-36">
-                    <div className="frame-332">
-                        <div className="---------">
-                            같이 저녁 먹어요
-                        </div>
-                    </div>
-                    <div className="frame-34">
-                        <div className="_1-3">
-                            1/3
-                        </div>
-                    </div>
-                    <div className="frame-35">
-                        <div className="----3">
-                            모집완료
-                        </div>
-                    </div>
-                </div>
-                <div className="frame-36">
-                    <div className="frame-332">
-                        <div className="---------">
-                            같이 저녁 먹어요
-                        </div>
-                    </div>
-                    <div className="frame-34">
-                        <div className="_1-3">
-                            1/3
-                        </div>
-                    </div>
-                    <div className="frame-35">
-                        <div className="----3">
-                            모집완료
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <GroupOption>
+            <MkGroupButton onClick={console.log("그룹 생성")}>
+                <button type="submit">그룹 개설하기</button>
+            </MkGroupButton>
+            <Info>
+                <InfoHeader style={{ gridTemplateColumns: "3fr" }}>
+                        그룹 개설 안내
+                </InfoHeader>
+                <InfoBody  style={{ gridTemplateColumns: "3fr" }}>
+                    <ul>
+                        <li>
+                            그룹 개설 시 구성원들 간 예의를 지켜주세요.
+                        </li>
+                        <li>
+                            비정상적인 활동으로 인한 신고 접수 시 활동에 제재가 있을 수 있습니다.
+                        </li>
+                        <li>구성원들끼리 원활한 소통으로 행복한 함밥 생활을 즐겨주세요.</li>
+                    </ul>
+                </InfoBody>
+            </Info>
+        </GroupOption>
     )
 }
 const MakeGroup = () => {

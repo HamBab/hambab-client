@@ -314,6 +314,7 @@ export const SignupSection = styled.div`
 	}
 `;
 
+//MakeGoup
 export const Content = styled.div`
 	background-color: rgba(229, 229, 229, 1);
     min-height: 100vh;
@@ -400,4 +401,136 @@ export const Tags = styled.div`
 	flex-direction: column;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	
+`;
+export const MkGroupButton = styled.div`
+	button {
+		border: none;
+		color: #ffffff;
+		text-align: center;
+		font: 400 24px 'Inter';
+		position: relative;
+		background-color: #19abbf;
+		padding: 40px 0px 40px 0px;
+		height: 80px;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		&:hover {
+			box-shadow: 0 0 0 3px #19abbf inset; 
+			background-color: #ffffff;
+			color: #19abbf;
+		}
+	}
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-self: stretch;
+	height: 80px;
+`;
+export const Info = styled.div`
+	border-radius: 10px;
+    border: solid #545454;
+    border-width: 1px;
+    padding: 10px 25px 10px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    height: 430px;
+    position: relative;
+    overflow: auto;
+`;
+
+export const InfoHeader = styled.div`
+    display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+    gap: 0px;
+    position: relative;
+
+	border: solid #545454;
+    border-width: 0px 0px 2px 0px;
+    padding: 15px 0px 10px 0px;
+    align-items: center;
+    justify-content: center;
+    width: -webkit-fill-available;
+
+	// --2
+	color: #000000;
+    font: 700 16px 'Inter';
+    position: relative;
+	text-align: center;
+`;
+
+export const InfoBody = styled.div`
+	// display: grid;
+	// grid-template-columns: 1fr 1fr 1fr;
+	gap: 0px;
+    position: relative;
+	padding: 0px 0px 10px 0px;
+	align-items: center;
+	justify-content: center;
+
+	color: #000000;
+    font: 400 16px 'Inter';
+	width: -webkit-fill-available;
+	text-align: center;
+	ul {
+		margin 70px;
+	}
+	li {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+`;
+
+export const Tab1 = styled.div`
+	text-align: left;
+`;
+
+export const Tab2 = styled.div`
+	text-align: center;
+`;
+
+export const Tab3 = styled.div`
+	text-align: right;
+`;
+export const GroupElem = styled.div`
+	border: solid #545454;
+	border-width: 0px 0px 1px 0px;
+	padding: 20px 0px 20px 0px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	align-items: center;
+	width: -webkit-fill-available;
+`;
+
+export const RestaurantInfo = styled.div`
+	display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 80px;
+
+    position: absolute;
+    width: 1180px;
+    height: 550px;
+    top: 10px;
+
+    position: relative;
+`;
+
+export const GroupOption = styled.div
+`
+	display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 450px;
+    height: 550px;
+    position: relative;
 `;
