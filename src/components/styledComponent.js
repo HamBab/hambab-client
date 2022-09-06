@@ -420,12 +420,25 @@ export const MkGroupButton = styled.div`
 			background-color: #ffffff;
 			color: #19abbf;
 		}
+		
 	}
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-self: stretch;
 	height: 80px;
+
+		&.group-edit {
+			button {
+				color: #ffffff;
+				background-color: #818087;
+				&:hover {
+					color: #818087;
+					box-shadow: 0 0 0 3px #818087 inset;
+					background-color: #ffffff;
+				}
+		}
+	}
 `;
 export const Info = styled.div`
 	border-radius: 10px;
@@ -442,6 +455,10 @@ export const Info = styled.div`
     height: 430px;
     position: relative;
     overflow: auto;
+
+	&.info-member {
+		height: 350px;	
+	}
 `;
 
 export const InfoHeader = styled.div`
@@ -483,6 +500,27 @@ export const InfoBody = styled.div`
 	li {
 		margin-top: 20px;
 		margin-bottom: 20px;
+	}
+	&.infobody-member{
+		article {
+			margin-left: 10px;
+			display: inline-block;
+			button {
+				border-radius: 50px;
+				border: none;
+				color: #ffffff;
+				background-color: #BD4747;
+				font-size: 14px;
+				vertical-align: text-top;
+			}
+		}
+		ul {
+			margin 20px;
+		}
+		li {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
 	}
 `;
 
@@ -532,5 +570,18 @@ export const GroupOption = styled.div
     flex-shrink: 0;
     width: 450px;
     height: 550px;
+    position: relative;
+`;
+
+export const GroupMember = styled.div
+`
+	display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 450px;
+	height: 550px;
     position: relative;
 `;
