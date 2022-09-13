@@ -13,32 +13,43 @@ import {
     Content,
     Main,
     Item,
+    LItem,
+    RItem,
     FullItem,
 	GroupOption,
 } from "./styledComponent";
+import animation from "../images/animate.gif";
 
 const Detail = (props) => {
     return (
         <MainContents>
             <FullItem>
                 <Item>
-                    {props.name}
+                    <h2>{props.name}</h2>
                 </Item>
             </FullItem>
-            <FullItem>
+            <LItem>
                 <Item>
-                    🗂 {props.category}
+                    <i class="fa-solid fa-list"></i> {props.category}
                 </Item>
-            </FullItem>
-            <FullItem>
+            </LItem>
+            <RItem>
                 <Item>
-                    📍 {props.address}
+                    <i class="fa-solid fa-map-pin"></i> {props.address}
                 </Item>
-            </FullItem>
-            <FullItem>
+            </RItem>
+            <LItem>
                 <Item>
-                    📞 {props.number}
+                    <i class="fa-solid fa-phone"></i> {props.number}
                 </Item>
+            </LItem>
+            <RItem>
+                <Item>
+                    <i class="fa-regular fa-clock"></i> {props.time}
+                </Item>
+            </RItem>
+            <FullItem>
+                <img src={animation} alt="침을 흘리며 함꼐 밥을 먹자고 말하는 함밥 캐릭터" width={"70%"}/>
             </FullItem>
         </MainContents>
     )
@@ -172,12 +183,13 @@ const RestaurantInfo = (props) => {
     const RestCategory = "한식";
     const RestAddress = "서울특별시 동대문구";
     const RestNumber = "02-123-4567";
+    const RestTime = "09:30 - 19:00";
 
 
     return (
         <Content>
             <Main>
-                <Detail name={RestName} category={RestCategory} address={RestAddress} number={RestNumber}></Detail>
+                <Detail name={RestName} category={RestCategory} address={RestAddress} number={RestNumber} time={RestTime}></Detail>
                 <Groups groupname="그룹명그룹명"></Groups>
             </Main>
         </Content>
