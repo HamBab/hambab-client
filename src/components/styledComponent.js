@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import hambabimg from "../images/hambabimg.png";
 
 // Main
 export const SearchForm = styled.div`
@@ -584,4 +585,99 @@ export const GroupMember = styled.div
     width: 450px;
 	height: 550px;
     position: relative;
+`;
+
+// MyPage
+export const MyPageSection = styled.div`
+	background-color: #ffffff;
+	border-radius: 10px;
+	width: 35rem;
+	padding-top: 3rem;
+	padding-bottom: 4rem;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 8rem;
+	box-shadow: 0 5px 18px -7px rgba(0,0,0,0.2);
+
+	// input {
+	// 	width: 18rem;
+	// 	height: 2.5rem;
+	// 	border: 2px solid #19abbf;
+	// 	border-radius: 20px;
+	// 	background-color: transparent;
+	// 	margin-top: 20px;
+	// 	padding-left: 1rem;
+	// 	content: "f0e0";
+	// 	font-family: "Font Awesome 5 Free"; 
+	// }
+	h2 {
+		color: #495057;
+		padding-bottom: 2rem;
+	}
+`;
+
+export const Profile = styled.div`
+	height: 230px;
+	line-height: 2rem;
+	padding: 10px;
+	background-image: url(${hambabimg});
+	overflow: visible visible;
+	background-size: 200px 200px;
+	background-repeat: no-repeat;
+	background-position: center;
+	button {
+		font-size: 16px;
+		padding: 3px 10px;
+		border-radius: 100px;
+		border: none;
+		background-color: rgb(239, 239, 239);
+		border: 1px solid rgb(0,0,0, 0.15);
+		color: rgb(118,118,118);
+
+		&:hover {
+			box-shadow: 0 0 0 1px #19abbf inset; 
+			color: #19abbf;
+			background-color: #ffffff;
+			transition-duration: 0.3s;
+		}
+		position: relative;
+		top: 200px;
+	}
+	h3 {
+		font-size: 18px;
+		position: relative;
+		top: 130px;
+		border: 2px dashed #ffffff;
+		border-radius: 5px;
+		display: inline-block;
+		margin-block-end: 0;
+		background-color: rgb(255,255, 255, 0.5);
+		padding: 2px;
+	}
+`;
+
+export const MyPageButtons=styled.div`
+	position: static;
+	button {
+		width: 200px;
+		height: 100px;
+		margin: 15px;
+		border-radius: 10px;
+		border: 1px solid rgb(0,0,0, 0.15);
+		color: #495057;
+		box-shadow: 1px 1px 3px rgb(0,0,0, 0.08);
+		i {
+			display: block;
+			font-size: 30px;
+			color: inherit;
+			margin-bottom: 2px;
+			
+		}
+		&:hover {
+			border: 1px solid #19abbf;
+			color: #19abbf;
+			transition-duration: 0.3s;
+			background-color: white;
+		}
+	}
 `;
