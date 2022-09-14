@@ -29,48 +29,60 @@ const Details = (props) => {
             </header>
             <LItem>
                 <Item>
-                    🗂 그룹명
-                    <p><input type="text"></input>
-                    </p>
+                    <label>
+                    <i class="fa-solid fa-quote-left"></i> 그룹명
+                        <p><input type="text" placeholder="그룹명을 입력해주세요."></input>
+                        </p>
+                    </label>
                 </Item>
             </LItem>
             <RItem>
                 <Item>
-                    📍 날짜 선택
-                    <p><input type="date"></input></p>
+                    <label>
+                    <i class="fa-regular fa-calendar-days"></i> 날짜 선택
+                        <p><input type="date"></input></p>
+                    </label>
                 </Item>
             </RItem>
             <LItem>
                 <Item>
-                    👥 희망 인원
-                    <p><input type="number" min={1}></input></p>
+                    <label>
+                    <i class="fa-solid fa-users"></i> 희망 인원
+                        <p><input type="number" min={1}></input></p>
+                    </label>
                 </Item>
             </LItem>
             <RItem>
                 <Item>
-                    ⏰ 시간 선택
-                    <p><input type="time" style={{width:'90px'}}></input> ~ <input type="time"style={{width:'90px'}}></input></p>
+                    <label>
+                    <i class="fa-solid fa-clock"></i> 시간 선택
+                        <p><input type="time" style={{width:'90px'}}></input> ~ <input type="time"style={{width:'90px'}}></input></p>
+                    </label>
                 </Item>
             </RItem>
             <FullItem>
                 <Item>
-                    🏷 조건 설정
-                    <p><Tags>
-                            <Tag>#10대</Tag>
-                            <Tag>#20대</Tag>
-                            <Tag>#30대</Tag>
-                            <Tag>#40대</Tag>
-                            <Tag>#50대</Tag>
-                            <Tag>#60대 이상</Tag>
-                            <Tag>#연령무관</Tag>
-                        </Tags>
-                    </p>
+                    <label>
+                    <i class="fa-solid fa-tags"></i> 조건 설정
+                        <p><Tags>
+                                <Tag>#10대</Tag>
+                                <Tag>#20대</Tag>
+                                <Tag>#30대</Tag>
+                                <Tag>#40대</Tag>
+                                <Tag>#50대</Tag>
+                                <Tag>#60대 이상</Tag>
+                                <Tag>#연령무관</Tag>
+                            </Tags>
+                        </p>
+                    </label>
                 </Item>
             </FullItem>
             <FullItem>
                 <Item>
-                    ✒️ 상세 설명<br></br>
-                    <textarea></textarea>
+                    <label>
+                    <i class="fa-solid fa-pen-fancy"></i> 상세 설명<br></br>
+                        <textarea placeholder="상세 설명을 입력해주세요."></textarea>
+                    </label>
                 </Item>
             </FullItem>
             </MainContents>

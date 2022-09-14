@@ -373,13 +373,16 @@ export const Item = styled.div`
     justify-content: flex-start;
 	textarea {
 		overflow-y: scroll;
-		width: 450px;
+		width: 500px;
 		height: 100px;
 		resize: none;
 	}
 	input {
 		width: 200px;
 		height: 25px;
+	}
+	i {
+		color: #19abbf;
 	}
 `;
 export const LItem = styled.div`
