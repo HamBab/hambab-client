@@ -9,6 +9,7 @@ import Signup from "./components/Signup";
 import RestaurantList from "./components/RestaurantList";
 import MakeGroup from "./components/MakeGroup";
 import EditGroup from "./components/EditGroup";
+import MyPage from "./components/MyPage"
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -28,7 +29,8 @@ function App() {
 					<Route path="restaurants/makegroup" element={<MakeGroup />} />
 					<Route path="restaurants/editgroup" element={<EditGroup />} />
 					<Route path="/login" element={<Login />} />                        
-					<Route path="/signup" element={<Signup />} />                
+					<Route path="/signup" element={<Signup />} />
+					<Route path="/mypage" element={<MyPage />} />              
 				</Route>
 				<Route path="*" element={<div>There's nothing here!</div>} />
 			</Routes>
