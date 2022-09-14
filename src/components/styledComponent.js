@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import hambabimg from "../images/hambabimg.png";
 
 // Main
 export const SearchForm = styled.div`
@@ -314,6 +315,7 @@ export const SignupSection = styled.div`
 	}
 `;
 
+//MakeGoup
 export const Content = styled.div`
 	background-color: rgba(229, 229, 229, 1);
     min-height: 100vh;
@@ -371,13 +373,16 @@ export const Item = styled.div`
     justify-content: flex-start;
 	textarea {
 		overflow-y: scroll;
-		width: 450px;
+		width: 500px;
 		height: 100px;
 		resize: none;
 	}
 	input {
 		width: 200px;
 		height: 25px;
+	}
+	i {
+		color: #19abbf;
 	}
 `;
 export const LItem = styled.div`
@@ -400,4 +405,282 @@ export const Tags = styled.div`
 	flex-direction: column;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	
+`;
+export const MkGroupButton = styled.div`
+	button {
+		border: none;
+		color: #ffffff;
+		text-align: center;
+		font: 400 24px 'Inter';
+		position: relative;
+		background-color: #19abbf;
+		padding: 40px 0px 40px 0px;
+		height: 80px;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		&:hover {
+			box-shadow: 0 0 0 3px #19abbf inset; 
+			background-color: #ffffff;
+			color: #19abbf;
+		}
+		
+	}
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-self: stretch;
+	height: 80px;
+
+		&.group-edit {
+			button {
+				color: #ffffff;
+				background-color: #818087;
+				&:hover {
+					color: #818087;
+					box-shadow: 0 0 0 3px #818087 inset;
+					background-color: #ffffff;
+				}
+		}
+	}
+`;
+export const Info = styled.div`
+	border-radius: 10px;
+    border: solid #545454;
+    border-width: 1px;
+    padding: 10px 25px 10px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    height: 430px;
+    position: relative;
+    overflow: auto;
+
+	&.info-member {
+		height: 350px;	
+	}
+`;
+
+export const InfoHeader = styled.div`
+    display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+    gap: 0px;
+    position: relative;
+
+	border: solid #545454;
+    border-width: 0px 0px 2px 0px;
+    padding: 15px 0px 10px 0px;
+    align-items: center;
+    justify-content: center;
+    width: -webkit-fill-available;
+
+	// --2
+	color: #000000;
+    font: 700 16px 'Inter';
+    position: relative;
+	text-align: center;
+`;
+
+export const InfoBody = styled.div`
+	// display: grid;
+	// grid-template-columns: 1fr 1fr 1fr;
+	gap: 0px;
+    position: relative;
+	padding: 0px 0px 10px 0px;
+	align-items: center;
+	justify-content: center;
+
+	color: #000000;
+    font: 400 16px 'Inter';
+	width: -webkit-fill-available;
+	text-align: center;
+	ul {
+		margin 70px;
+	}
+	li {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	&.infobody-member{
+		article {
+			margin-left: 10px;
+			display: inline-block;
+			button {
+				border-radius: 50px;
+				border: none;
+				color: #ffffff;
+				background-color: #BD4747;
+				font-size: 14px;
+				vertical-align: text-top;
+			}
+		}
+		ul {
+			margin 20px;
+		}
+		li {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+	}
+`;
+
+export const Tab1 = styled.div`
+	text-align: left;
+`;
+
+export const Tab2 = styled.div`
+	text-align: center;
+`;
+
+export const Tab3 = styled.div`
+	text-align: right;
+`;
+export const GroupElem = styled.div`
+	border: solid #545454;
+	border-width: 0px 0px 1px 0px;
+	padding: 20px 0px 20px 0px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	align-items: center;
+	width: -webkit-fill-available;
+`;
+
+export const RestaurantInfo = styled.div`
+	display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 80px;
+
+    position: absolute;
+    width: 1180px;
+    height: 550px;
+    top: 10px;
+
+    position: relative;
+`;
+
+export const GroupOption = styled.div
+`
+	display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 450px;
+    height: 550px;
+    position: relative;
+`;
+
+export const GroupMember = styled.div
+`
+	display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 450px;
+	height: 550px;
+    position: relative;
+`;
+
+// MyPage
+export const MyPageSection = styled.div`
+	background-color: #ffffff;
+	border-radius: 10px;
+	width: 35rem;
+	padding-top: 3rem;
+	padding-bottom: 4rem;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 8rem;
+	box-shadow: 0 5px 18px -7px rgba(0,0,0,0.2);
+
+	// input {
+	// 	width: 18rem;
+	// 	height: 2.5rem;
+	// 	border: 2px solid #19abbf;
+	// 	border-radius: 20px;
+	// 	background-color: transparent;
+	// 	margin-top: 20px;
+	// 	padding-left: 1rem;
+	// 	content: "f0e0";
+	// 	font-family: "Font Awesome 5 Free"; 
+	// }
+	h2 {
+		color: #495057;
+		padding-bottom: 2rem;
+	}
+`;
+
+export const Profile = styled.div`
+	height: 230px;
+	line-height: 2rem;
+	padding: 10px;
+	background-image: url(${hambabimg});
+	overflow: visible visible;
+	background-size: 200px 200px;
+	background-repeat: no-repeat;
+	background-position: center;
+	button {
+		font-size: 16px;
+		padding: 3px 10px;
+		border-radius: 100px;
+		border: none;
+		background-color: rgb(239, 239, 239);
+		border: 1px solid rgb(0,0,0, 0.15);
+		color: rgb(118,118,118);
+
+		&:hover {
+			box-shadow: 0 0 0 1px #19abbf inset; 
+			color: #19abbf;
+			background-color: #ffffff;
+			transition-duration: 0.3s;
+		}
+		position: relative;
+		top: 200px;
+	}
+	h3 {
+		font-size: 18px;
+		position: relative;
+		top: 130px;
+		border: 2px dashed #ffffff;
+		border-radius: 5px;
+		display: inline-block;
+		margin-block-end: 0;
+		background-color: rgb(255,255, 255, 0.5);
+		padding: 2px;
+	}
+`;
+
+export const MyPageButtons=styled.div`
+	position: static;
+	button {
+		width: 200px;
+		height: 100px;
+		margin: 15px;
+		border-radius: 10px;
+		border: 1px solid rgb(0,0,0, 0.15);
+		color: #495057;
+		box-shadow: 1px 1px 3px rgb(0,0,0, 0.08);
+		i {
+			display: block;
+			font-size: 30px;
+			color: inherit;
+			margin-bottom: 2px;
+			
+		}
+		&:hover {
+			border: 1px solid #19abbf;
+			color: #19abbf;
+			transition-duration: 0.3s;
+			background-color: white;
+		}
+	}
 `;
